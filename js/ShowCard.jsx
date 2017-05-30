@@ -3,7 +3,7 @@ import { string } from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width:32%;
+  width: 32%;
   border: 2px solid #333;
   border-radius: 4px;
   margin-bottom: 25px;
@@ -37,4 +37,5 @@ ShowCard.propTypes = {
   year: string.isRequired,
   description: string.isRequired
 };
+
 export default ShowCard;
