@@ -1,29 +1,22 @@
 // @flow
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import ShowCard from './ShowCard';
 import Header from './Header';
 
-class Search extends Component {
-  state = {
-    searchTerm: ''
-  };
-  props: {
-    shows: Array<Show>
-  };
+const Search = (props :{
+  searchTerm: string, // eslint-disable-line react/no-unused-prop-types
+  shows: Array<Show> }) => ( 
   handleSearchTermChange = (
     event: SyntheticKeyboardEvent & { target: HTMLInputElement }
   ) => {
     this.setState({ searchTerm: event.target.value });
-  };
+  }
   render() {
     return (
       <div className="search">
-        <Header
-          searchTerm={this.state.searchTerm}
-          showSearch
-          handleSearchTermChange={this.handleSearchTermChange}
-        />
+        <Header showSearch />
         <div>
           {this.props.shows
             .filter(
@@ -37,6 +30,6 @@ class Search extends Component {
       </div>
     );
   }
-}
+)
 
-export default Search;
+export default connect(mapStateToProps)(Search);
