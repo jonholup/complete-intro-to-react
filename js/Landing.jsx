@@ -10,7 +10,7 @@ const Landing = (props: {
   handleSearchTermChange: Function
 }) => (
   <div className="landing">
-    <h1>svideo</h1>
+    <h1>{props.searchTerm}</h1>
     <input
       onChange={props.handleSearchTermChange}
       value={props.searchTerm}
@@ -27,4 +27,5 @@ const mapDispatchToProps = (dispatch: Function) => ({
     dispatch(setSearchTerm(event.target.value));
   }
 });
+
 export default connect(mapStateToProps, mapDispatchToProps)(Landing);

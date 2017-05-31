@@ -20,6 +20,7 @@ const Image = styled.img`
   float: left;
   margin-right: 10px;
 `;
+
 class ShowCard extends Component {
   shouldComponentUpdate() {
     return false;
