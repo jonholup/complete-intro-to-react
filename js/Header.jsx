@@ -34,6 +34,7 @@ const Header = (props: {
           svideo
         </Link>
       </h1>
+      {utilSpace}
     </header>
   );
 };
