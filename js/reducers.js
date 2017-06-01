@@ -18,6 +18,7 @@ const apiData = (state = {}, action: Action) => {
   }
   return state;
 };
+
 const rootReducer = combineReducers({ searchTerm, apiData });
 
 export default rootReducer;

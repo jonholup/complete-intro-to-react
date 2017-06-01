@@ -20,8 +20,8 @@ class Details extends Component {
   render() {
     const { title, description, year, poster, trailer } = this.props.show;
     let ratingComponent;
-    if (this.state.apiData.rating) {
-      ratingComponent = <h3>{this.state.apiData.rating}</h3>;
+    if (this.props.rating) {
+      ratingComponent = <h3>{this.props.rating}</h3>;
     } else {
       ratingComponent = <Spinner />;
     }
@@ -61,8 +61,9 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch: Function, ownProps) => ({
-  getApiData() {
+  getAPIData() {
     dispatch(getAPIDetails(ownProps.show.imdbID));
   }
 });
+
 export default connect(mapStateToProps, mapDispatchToProps)(Details);

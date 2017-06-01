@@ -23,6 +23,10 @@ declare type ActionT<A: ActionType, P> = {|
   payload: P
 |};
 
+<<<<<<< HEAD
 export type Action =
   | ActionT<'SET_SEARCH_TERM', string>
   | ActionT<'ADD_API_DATA', Show>;
+=======
+export type Action = ActionT<'SET_SEARCH_TERM', string> | ActionT<'ADD_API_DATA', Show>;
+>>>>>>> 7eb2c8f14a1cff656339fc894a71ed04adca3d74
