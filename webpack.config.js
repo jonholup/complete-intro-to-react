@@ -48,7 +48,7 @@ const config = {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         include: [
-          patch.resolve.('js'),
+          path.resolve('js'),
           path.resolve('node_modules/preact-compat/src')
         ]
       }
