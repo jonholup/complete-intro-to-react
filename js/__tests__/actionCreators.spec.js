@@ -33,7 +33,9 @@ test('getAPIDetails', (done: Function) => {
           response: strangerThings
         })
         .then(() => {
-          expect(request.url).toEqual(`http://localhost:3000/${strangerThings.imdbID}`);
+          expect(request.url).toEqual(
+            `http://localhost:3000/${strangerThings.imdbID}`
+          );
           expect(dispatchMock).toBeCalledWith(addAPIData(strangerThings));
           done();
         });
