@@ -20,3 +20,9 @@ test('addAPIData', () => {
     })
   ).toMatchSnapshot();
 });
+
+test('getAPIDetails', () => {
+  moxios.withMock(() => {
+    const dispatchMock = jest.fn();
+  });
+});
