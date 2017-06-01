@@ -27,6 +27,8 @@ server.use(
   })
 );
 
+server.use(webpackHotMiddleware(compiler));
+
 server.use('/public', express.static('./public'));
 
 server.use((req, res) => {
