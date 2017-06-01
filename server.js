@@ -28,6 +28,7 @@ server.use((req, res) => {
       React.createElement(App)
     )
   );
+
   if (context.url) {
     res.redirect(context.url);
   }
